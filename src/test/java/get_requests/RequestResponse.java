@@ -32,17 +32,15 @@ public class RequestResponse {
         //1) Set the url
         String url = "https://petstore.swagger.io/v2/pet/5";
 
-
         //2) Set the expected data / payload
         //3) Send request get response
-
 
         Response response =  given().when().get(url);
         response.print();
         response.prettyPrint();
 
-         /*1) print(); methodu response ta bulunan body kısmını console a yazdirmaya yarar
-           2) prettyPrint(); methodu response ta bulunan body kısmını console a daha okunakli bir formatta yazdirmaya yarar   */
+        //1) print(); methodu response ta bulunan body kısmını console a yazdirmaya yarar
+        //2) prettyPrint(); methodu response ta bulunan body kısmını console a daha okunakli bir formatta yazdirmaya yarar
 
         //Response icindeki status code nasil yazdirilr?
         System.out.println("Statust code ==> " + response.statusCode());//200
@@ -53,7 +51,14 @@ public class RequestResponse {
         // Response icindeki status line nasil yazdirilr?
         System.out.println("Status line ==> " + response.statusLine());//HTTP/1.1 200 OK
 
+        // Response icindeki Header bolümündüke tüm headerlar nasil yazdirilr?
+        System.out.println("Headers ==>  " + response.headers());
 
+        // Response icindeki Header bolümündeki bir baslik bilgisi nasil yazdirilr?
+        System.out.println(" Server header bilgisi ==> " + response.header("Server"));//Jetty(9.2.9.v20150224)
+
+        // Response icindeki time bilgisi nasil yazdirilr?
+        System.out.println(" Time ==> " + response.time());//1841
 
         //4) Do assertion
 
