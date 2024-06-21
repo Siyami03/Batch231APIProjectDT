@@ -67,4 +67,30 @@ public class Get01 {
                 .statusLine("HTTP/1.1 200 OK");
 
     }
+
+    //ücüncü yol
+    @Test
+    public void get03() {
+        //1)set the url
+        //Birinci yol
+      /*  String baseUrl ="https://petstore.swagger.io/v2";
+        String pathParameter="/pet/313";*/
+
+        //ikinci yol
+        RestAssured.baseURI = "https://petstore.swagger.io/v2";
+        RestAssured.basePath = "/pet/313";
+
+        //2)set the expected data / payload
+        //3)send request get response
+        //4)do assertion
+        given().when()
+                .get()
+                .then()
+                .statusCode(200)
+                .contentType("application/json")
+                .statusLine("HTTP/1.1 200 OK")
+                // .log().body()
+                .log().all();
+
+    }
 }
