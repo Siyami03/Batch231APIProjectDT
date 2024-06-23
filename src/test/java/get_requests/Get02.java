@@ -9,7 +9,6 @@ import static org.hamcrest.Matchers.*;
 
 public class Get02 {
 
-
       /*Given
             https://petstore.swagger.io/v2/pet/0
         When
@@ -37,13 +36,8 @@ public class Get02 {
         Response response = given().when().get();
         response.prettyPrint();
 
-        /*
-        400 kodlu response larda HttpResponseException almamak icin bu kodu pom.xml dosyamizdaki properties
-        tagi icinde yazmaliyiz
-         <argLine>-Duser.language=en</argLine>
-         */
-
-
+        /*400 kodlu response larda HttpResponseException almamak icin bu kodu pom.xml dosyamizdaki properties
+        tagi icinde yazmaliyiz   ==>     <argLine>-Duser.language=en</argLine>         */
 
         //do assertion
         response

@@ -6,10 +6,10 @@ import io.restassured.specification.RequestSpecification;
 import org.junit.jupiter.api.BeforeEach;
 
 public class PetStoreBaseUrl {
-    /*
-    Bu classin amaci:
-    ==> Her testten önce calisarak baseUrl ve content type ... gibi ortak request yapilandirmalarini yapmak
-    ==> Testlerin daha bakimi kolay yapilabilir hale getirmektir
+
+    /*Bu classin amaci:
+      ==> Her testten önce calisarak baseUrl ve content type ... gibi ortak request yapilandirmalarini yapmak
+      ==> Testlerin daha bakimi kolay yapilabilir hale getirmektir
      */
 
     protected RequestSpecification spec;
