@@ -10,8 +10,8 @@ import static org.hamcrest.Matchers.*;
 
 public class Get05 extends PetStoreBaseUrl {
 
-   /*
-    Given
+
+  /*Given
         https://petstore.swagger.io/v2/pet/findByStatus?status=available
     When
         Kullanıcı URL'e bir GET request gönderir
@@ -34,8 +34,7 @@ public class Get05 extends PetStoreBaseUrl {
     And
         Listenin ilk elemanının photoUrls değeri "string" olmalı
     And
-        Listenin ilk elemanının tags - id değeri 0 olmalı
- */
+        Listenin ilk elemanının tags - id değeri 0 olmalı         */
 
     @Test
     public void test01() {
@@ -65,9 +64,5 @@ public class Get05 extends PetStoreBaseUrl {
                 .body("[0].category.id",equalTo(0))
                 .body("[0].photoUrls[0]",equalTo("string"))
                 .body("[0].tags[0].id",equalTo(0)) ;
-
-
-        // 1 : 17 : 46
-
     }
 }
