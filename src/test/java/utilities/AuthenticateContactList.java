@@ -24,7 +24,5 @@ public class AuthenticateContactList {
         Response response = given().body(body).contentType(ContentType.JSON).when().post(url);
 
         return response.jsonPath().getString("token");
-
     }
-
 }

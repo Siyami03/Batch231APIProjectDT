@@ -11,8 +11,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
 public class Post02 extends JsonPlaceHolderBaseUrl {
-    /*
-    Given
+
+    /* Given
        1) https://jsonplaceholder.typicode.com/todos
        2)
 {
@@ -20,19 +20,15 @@ public class Post02 extends JsonPlaceHolderBaseUrl {
  "title": "Tidy your room",
  "completed": false
 }
-        When
-            Kullanıcı URL'e bir POST request gönderir
-        Then
-            Status code 201 olmalı
-        And
-            Response şu şekilde olmalı:
+        When            Kullanıcı URL'e bir POST request gönderir
+        Then            Status code 201 olmalı
+        And            Response şu şekilde olmalı:
             {
                 "userId": 55,
                 "title": "Tidy your room",
                 "completed": false,
                 "id": 201
-            }
-     */
+            }          */
 
     @Test
     public void test01() {

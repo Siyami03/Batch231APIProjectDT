@@ -8,8 +8,7 @@ import static io.restassured.RestAssured.given;
 
 public class Post01 extends PetStoreBaseUrl {
 
-      /*Given
-            https://petstore.swagger.io/v2/pet
+      /*Given            https://petstore.swagger.io/v2/pet
         And
 {
     "id": 313,
@@ -29,12 +28,9 @@ public class Post01 extends PetStoreBaseUrl {
     ],
     "status": "available"
 }
-        When
-            Kullanıcı URL'e bir POST request gönderir
-        Then
-            HTTP Status Code 200 olmalı
-        And
-            Content Type "application/json" olmalı     */
+        When            Kullanıcı URL'e bir POST request gönderir
+        Then            HTTP Status Code 200 olmalı
+        And             Content Type "application/json" olmalı     */
 
     @Test
     public void test01() {

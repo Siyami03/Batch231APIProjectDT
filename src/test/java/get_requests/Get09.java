@@ -12,12 +12,9 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class Get09 extends JsonPlaceHolderBaseUrl {
 
-  /*Given
-       https://jsonplaceholder.typicode.com/todos
-    When
-       Kullanıcı URL'e bir GET request gönderir
-    Then
-        Status code 200 olmalı
+  /*Given       https://jsonplaceholder.typicode.com/todos
+    When        Kullanıcı URL'e bir GET request gönderir
+    Then        Status code 200 olmalı
         "Id"leri 190 dan büyük olanları konsola yazdırın
         "Id"si 190 dan büyük 10 adet veri olduğunu doğrulayın
         "Id"si 5 den küçük olan tüm kullanıcıların "userid"lerini yazdırın

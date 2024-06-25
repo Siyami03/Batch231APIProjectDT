@@ -8,7 +8,7 @@ import utilities.AuthenticateContactList;
 public class ContactListBaseUrl {
 
 
-      /*Bu classin amaci:
+    /*Bu classin amaci:
     ==> Her testten önce calisarak baseUrl ve content type ... gibi ortak request yapilandirmalarini yapmak
     ==> Testlerin daha bakimi kolay yapilabilir hale getirmektir     */
 
