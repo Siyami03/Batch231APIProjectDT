@@ -8,16 +8,11 @@ import static org.hamcrest.Matchers.*;
 
 public class Get06 extends HerOkuAppBaseUrl {
 
-      /*Given
-            https://restful-booker.herokuapp.com/booking/2193
-        When
-            User send a GET request to the URL
-        Then
-            HTTP Status Code should be 200
-        And
-            Response content type should contain "application/json"
-        And
-            Response body should be like;
+      /*Given            https://restful-booker.herokuapp.com/booking/2193
+        When             User send a GET request to the URL
+        Then             HTTP Status Code should be 200
+        And              Response content type should contain "application/json"
+        And              Response body should be like;
         {
             "firstname": "John",
             "lastname": "Smith",
