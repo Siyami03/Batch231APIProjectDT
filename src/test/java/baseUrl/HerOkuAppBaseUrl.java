@@ -6,11 +6,9 @@ import org.junit.jupiter.api.BeforeEach;
 
 public class HerOkuAppBaseUrl {
 
-    /*
-    Bu classin amaci:
+    /*Bu classin amaci:
     ==> Her testten önce calisarak baseUrl ve content type ... gibi ortak request yapilandirmalarini yapmak
-    ==> Testlerin daha bakimi kolay yapilabilir hale getirmektir
-     */
+    ==> Testlerin daha bakimi kolay yapilabilir hale getirmektir     */
 
     protected RequestSpecification spec;
 
