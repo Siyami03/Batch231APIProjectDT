@@ -3,6 +3,7 @@ import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 import org.junit.jupiter.api.BeforeEach;
+import utilities.AuthenticateHerOkuApp;
 
 public class HerOkuAppBaseUrl {
 
@@ -17,6 +18,7 @@ public class HerOkuAppBaseUrl {
         spec  = new RequestSpecBuilder()
                 .setBaseUri("https://restful-booker.herokuapp.com")//Base Url i ayarladik
                 .setContentType(ContentType.JSON)
+                .addHeader("Cookie","token="+ AuthenticateHerOkuApp.generateToken())
                 .build();
     }
 }

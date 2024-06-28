@@ -11,18 +11,20 @@ public class AuthenticateContactList {
 
     public static String generateToken(){
 
-        //Bu endpoint bir token olusturmak icin swaggerdan aldik
+        //set the url
         String url ="https://thinking-tester-contact-list.herokuapp.com/users/login";
 
-        //set the payload/ expected data
+        //set the payload
         String body="{\n" +
                 "    \"email\": \"techpro@techpro.com\",\n" +
                 "    \"password\": \"1234567\"\n" +
                 "}";
-
         //send request get response
         Response response = given().body(body).contentType(ContentType.JSON).when().post(url);
 
+        //response icinden tokeni alip return ediyoruz
+
         return response.jsonPath().getString("token");
     }
+
 }

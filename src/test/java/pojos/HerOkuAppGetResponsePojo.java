@@ -12,7 +12,8 @@ public class HerOkuAppGetResponsePojo {
     public HerOkuAppGetResponsePojo() {
     }
 
-    public HerOkuAppGetResponsePojo(String firstname, String lastname, Integer totalprice, Boolean depositpaid, HerokuAppBookingDatesPojo bookingdates, String additionalneeds) {
+    public HerOkuAppGetResponsePojo(String firstname, String lastname, Integer totalprice, Boolean depositpaid,
+                                    HerokuAppBookingDatesPojo bookingdates, String additionalneeds) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.totalprice = totalprice;
