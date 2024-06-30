@@ -1,14 +1,14 @@
 package pojos;
 
-public class HerokuAppBookingDatesPojo {
+public class HerOkuAppBookingDatesPojo {
 
     private String checkin;
     private String checkout;
 
-    public HerokuAppBookingDatesPojo() {
+    public HerOkuAppBookingDatesPojo() {
     }
 
-    public HerokuAppBookingDatesPojo(String checkin, String checkout) {
+    public HerOkuAppBookingDatesPojo(String checkin, String checkout) {
         this.checkin = checkin;
         this.checkout = checkout;
     }

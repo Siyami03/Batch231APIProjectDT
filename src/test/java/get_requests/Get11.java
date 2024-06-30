@@ -3,8 +3,8 @@ package get_requests;
 import baseUrl.HerOkuAppBaseUrl;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Test;
-import pojos.HerOkuAppGetResponsePojo;
-import pojos.HerokuAppBookingDatesPojo;
+import pojos.HerOkuAppGetResponesPojo;
+import pojos.HerOkuAppBookingDatesPojo;
 
 import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -33,14 +33,14 @@ public class Get11 extends HerOkuAppBaseUrl {
         spec.pathParams("first","booking","second",1801);
 
         //set the expected data
-        HerokuAppBookingDatesPojo bookingDatesPojo= new HerokuAppBookingDatesPojo("2018-01-01","2019-01-01");
-        HerOkuAppGetResponsePojo expectedData = new HerOkuAppGetResponsePojo("John","Smith",111,true,bookingDatesPojo,"Breakfast");
+        HerOkuAppBookingDatesPojo bookingDatesPojo= new HerOkuAppBookingDatesPojo("2018-01-01","2019-01-01");
+        HerOkuAppGetResponesPojo expectedData = new HerOkuAppGetResponesPojo("John","Smith",111,true,bookingDatesPojo,"Breakfast");
 
         //send request get response
         Response response = given(spec).when().get("{first}/{second}");
 
         //do assertion
-        HerOkuAppGetResponsePojo actualData =  response.as(HerOkuAppGetResponsePojo.class);
+        HerOkuAppGetResponesPojo actualData =  response.as(HerOkuAppGetResponesPojo.class);
 
         assertEquals(expectedData.getFirstname(),actualData.getFirstname());
         assertEquals(expectedData.getLastname(),actualData.getLastname());

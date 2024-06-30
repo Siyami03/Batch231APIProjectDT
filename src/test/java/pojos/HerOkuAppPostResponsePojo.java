@@ -1,17 +1,17 @@
 package pojos;
 
-public class HerokuAppPostResponsePojo {
+public class HerOkuAppPostResponsePojo {
 
     private Integer bookingid;
     //HerOkuAppGetResponsePojo muz booking alanini tam olarak temsil ediyor
     //o yüzden bu alaninin veri tipini HerOkuAppGetResponsePojo sectik
-    private HerOkuAppGetResponsePojo booking;
+    private HerOkuAppGetResponesPojo booking;
 
 
-    public HerokuAppPostResponsePojo() {
+    public HerOkuAppPostResponsePojo() {
     }
 
-    public HerokuAppPostResponsePojo(Integer bookingid, HerOkuAppGetResponsePojo booking) {
+    public HerOkuAppPostResponsePojo(Integer bookingid, HerOkuAppGetResponesPojo booking) {
         this.bookingid = bookingid;
         this.booking = booking;
     }
@@ -24,11 +24,11 @@ public class HerokuAppPostResponsePojo {
         this.bookingid = bookingid;
     }
 
-    public HerOkuAppGetResponsePojo getBooking() {
+    public HerOkuAppGetResponesPojo getBooking() {
         return booking;
     }
 
-    public void setBooking(HerOkuAppGetResponsePojo booking) {
+    public void setBooking(HerOkuAppGetResponesPojo booking) {
         this.booking = booking;
     }
 

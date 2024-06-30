@@ -3,9 +3,9 @@ package post_requests;
 import baseUrl.HerOkuAppBaseUrl;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Test;
-import pojos.HerOkuAppGetResponsePojo;
-import pojos.HerokuAppBookingDatesPojo;
-import pojos.HerokuAppPostResponsePojo;
+import pojos.HerOkuAppGetResponesPojo;
+import pojos.HerOkuAppBookingDatesPojo;
+import pojos.HerOkuAppPostResponsePojo;
 
 import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -53,14 +53,14 @@ public class Post06 extends HerOkuAppBaseUrl {
         spec.pathParam("first","booking");
 
         //set the expected data / payload
-        HerokuAppBookingDatesPojo bookingDatesPojo = new HerokuAppBookingDatesPojo("2021-09-21","2021-12-21");
-        HerOkuAppGetResponsePojo payload = new HerOkuAppGetResponsePojo("Ali","Can",999,true,bookingDatesPojo,"Breakfast");
+        HerOkuAppBookingDatesPojo bookingDatesPojo = new HerOkuAppBookingDatesPojo("2021-09-21","2021-12-21");
+        HerOkuAppGetResponesPojo payload = new HerOkuAppGetResponesPojo("Ali","Can",999,true,bookingDatesPojo,"Breakfast");
 
         //send request get response
         Response response = given(spec).body(payload).when().post("{first}");
 
         //do assertion
-        HerokuAppPostResponsePojo actualData=  response.as(HerokuAppPostResponsePojo.class);
+        HerOkuAppPostResponsePojo actualData=  response.as(HerOkuAppPostResponsePojo.class);
         System.out.println("actualData = " + actualData);
         assertEquals(200,response.statusCode());
         assertEquals(payload.getFirstname(),actualData.getBooking().getFirstname());

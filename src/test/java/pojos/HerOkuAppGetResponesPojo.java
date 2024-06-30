@@ -1,19 +1,19 @@
 package pojos;
 
-public class HerOkuAppGetResponsePojo {
+public class HerOkuAppGetResponesPojo {
 
     private String firstname;
     private String lastname;
     private Integer totalprice;
     private Boolean depositpaid;
-    private HerokuAppBookingDatesPojo bookingdates;
+    private HerOkuAppBookingDatesPojo bookingdates;
     private String additionalneeds;
 
-    public HerOkuAppGetResponsePojo() {
+    public HerOkuAppGetResponesPojo() {
     }
 
-    public HerOkuAppGetResponsePojo(String firstname, String lastname, Integer totalprice, Boolean depositpaid,
-                                    HerokuAppBookingDatesPojo bookingdates, String additionalneeds) {
+    public HerOkuAppGetResponesPojo(String firstname, String lastname, Integer totalprice, Boolean depositpaid,
+                                    HerOkuAppBookingDatesPojo bookingdates, String additionalneeds) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.totalprice = totalprice;
@@ -54,11 +54,11 @@ public class HerOkuAppGetResponsePojo {
         this.depositpaid = depositpaid;
     }
 
-    public HerokuAppBookingDatesPojo getBookingdates() {
+    public HerOkuAppBookingDatesPojo getBookingdates() {
         return bookingdates;
     }
 
-    public void setBookingdates(HerokuAppBookingDatesPojo bookingdates) {
+    public void setBookingdates(HerOkuAppBookingDatesPojo bookingdates) {
         this.bookingdates = bookingdates;
     }
 
